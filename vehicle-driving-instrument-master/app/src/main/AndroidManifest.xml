@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ujs.drivingapp">
+    <!-- 地图SDK（包含其搜索功能）需要的基础权限 -->
+    <!-- 允许程序打开网络套接字 -->
+    <!-- 允许蓝牙连接 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 获取GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 蓝牙连接权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- 蓝牙通讯权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DrivingApp"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Activities.FooterActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.FOOTER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.CollectActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.COLLECT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.ArchivesActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.ARCHIVES" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.WebActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.WEB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.SettingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.SETTING" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.ScanActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.SCANCODE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.PoiActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.POI" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.AdviceActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.ADVICE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.PunchActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.PUNCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.StartActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.SummaryActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.SUMMARY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- 导航组件 -->
+        <activity
+            android:name="com.amap.api.navi.AmapRouteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation"
+            android:theme="@android:style/Theme.NoTitleBar" /> <!-- 程序主入口 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- 地图 -->
+        <activity
+            android:name=".Activities.MapActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.MAP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.DriveActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ujs.driving.app.DRIVE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.amap.api.navi.AmapRouteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            tools:ignore="DuplicateActivity" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="01067d4474ed66ef9b3e5fdfe9bf4270" />
+    </application>
+
+</manifest>

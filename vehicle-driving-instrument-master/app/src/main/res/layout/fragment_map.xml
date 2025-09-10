@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".Fragments.MapFragment">
+
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="1dp"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="18dp"
+        android:layout_height="wrap_content">
+        <!-- 地图组件 -->
+        <com.amap.api.maps.MapView
+            android:background="@drawable/bg_corners_20"
+            android:id="@+id/map_track"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_gradient_white"
+        android:elevation="5dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="8dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:id="@+id/tv_map_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="@string/map_name"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_mileage_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_map_name"
+            android:text="1.96"
+            android:textColor="@color/text_black"
+            android:textSize="48sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_mileage_current"
+            android:layout_marginStart="2dp"
+            android:layout_toEndOf="@+id/tv_mileage_current"
+            android:letterSpacing="0.1"
+            android:text="@string/tv_unit_mileage"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_time_current"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_mileage_current"
+            android:layout_marginBottom="8dp"
+            android:text="2022年03月07日 16:36"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_speed_bar"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tv_time_current"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_speed_bar" />
+
+        <TextView
+            android:id="@+id/tv_speed_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_speed_bar"
+            android:layout_marginStart="4dp"
+            android:text="最慢 18.18 公里/小时"
+            android:textColor="@color/yello"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_speed_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_speed_bar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="4dp"
+            android:text="最快 21.82 公里/小时"
+            android:textColor="@color/red"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_speed_min"
+            android:layout_alignStart="@+id/tv_speed_min"
+            android:layout_marginTop="12dp"
+            android:text="@string/tv_drive_time"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_duration"
+            android:layout_alignStart="@+id/tv_duration"
+            android:layout_marginTop="6dp"
+            android:textSize="18sp"
+            android:text="00:21:10"
+            android:textColor="@color/text_black" />
+
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_speed_min"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="@string/tv_speed"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_speed_avg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_speed"
+            android:layout_alignStart="@+id/tv_speed"
+            android:layout_marginTop="6dp"
+            android:text="19.90"
+            android:textSize="18sp"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_unit_speed"
+            android:textSize="12sp"
+            android:letterSpacing="0.1"
+            android:layout_marginStart="2dp"
+            android:layout_alignBottom="@+id/tv_speed_avg"
+            android:layout_toEndOf="@+id/tv_speed_avg" />
+
+        <TextView
+            android:id="@+id/tv_abnormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_speed_max"
+            android:layout_alignEnd="@+id/tv_speed_max"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="@string/tv_abnormal"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_abnormal"
+            android:layout_alignEnd="@+id/tv_abnormal"
+            android:layout_marginTop="6dp"
+            android:text="20"
+            android:textSize="18sp"
+            android:textColor="@color/text_black" />
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

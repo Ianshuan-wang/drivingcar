@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/heart">
+    <target
+        android:name="path1"
+        android:animation="@animator/heart_animator" />
+    <target
+        android:name="path2"
+        android:animation="@animator/heart_animator" />
+    <target
+        android:name="path3"
+        android:animation="@animator/heart_animator" />
+
+</animated-vector>

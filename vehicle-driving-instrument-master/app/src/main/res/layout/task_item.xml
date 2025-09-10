@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp">
+
+    <ImageView
+        android:id="@+id/img_divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/bg_divideline_gray" />
+
+    <TextView
+        android:id="@+id/tv_task_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/img_divide_line"
+        android:text="完善个人资料"
+        android:textSize="16sp"
+        android:textColor="@color/text_black" />
+
+    <ImageView
+        android:id="@+id/img_task_detail"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/tv_task_name"
+        android:layout_toRightOf="@+id/tv_task_name"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_detail" />
+
+    <ImageView
+        android:id="@+id/img_exp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/tv_task_name"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ic_experience_orange" />
+
+    <TextView
+        android:id="@+id/tv_task_exp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_task_name"
+        android:layout_toEndOf="@+id/img_exp"
+        android:layout_alignBottom="@id/img_exp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="12dp"
+        android:text="+10"
+        android:textColor="@color/theme_orange" />
+
+    <TextView
+        android:id="@+id/tv_make_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-12dp"
+        android:layout_below="@+id/tv_task_name"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="去完成"
+        android:textColor="@color/white_700"
+        android:background="@drawable/bg_circle_orange" />
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/llayout_punch"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_punch">
+
+        <ImageView
+            android:id="@+id/img_experience"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_experience" />
+
+        <TextView
+            android:id="@+id/tv_punch_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未签"
+            android:textSize="10sp"
+            android:textColor="@color/white_700" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_punch_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="昨天"
+        android:textSize="10sp" />
+
+
+</LinearLayout>

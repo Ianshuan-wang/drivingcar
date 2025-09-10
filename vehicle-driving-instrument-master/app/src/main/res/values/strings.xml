@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">车旅迹忆</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_accumulated_mileage">累计里程数（公里）</string>
+    <string name="tv_set_route">设置路线</string>
+    <string name="tv_deviation">硬件限制，本次记录可能存在偏差</string>
+    <string name="map_name">高德地图</string>
+    <string name="tv_unit_mileage">公里</string>
+    <string name="tv_drive_time">驾驶时间</string>
+    <string name="tv_speed">平均速度</string>
+    <string name="tv_abnormal">异常次数</string>
+    <string name="tv_unit_speed">公里/小时</string>
+</resources>

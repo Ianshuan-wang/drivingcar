@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_permission_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="地图装扮"
+        android:textStyle="bold"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_permission_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="换定位标"
+        android:textSize="10sp"
+        android:textColor="@color/white_700" />
+</LinearLayout>

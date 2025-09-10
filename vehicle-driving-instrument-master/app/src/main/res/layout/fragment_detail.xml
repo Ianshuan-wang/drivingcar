@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Fragments.DetailFragment">
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/tv_time_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp"
+            android:text="2022年3月7日 20:52"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tv_mileage_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time_current"
+            android:layout_centerHorizontal="true"
+            android:text="1.85"
+            android:textColor="@color/text_black"
+            android:textSize="56sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_mileage_current"
+            android:layout_marginStart="2dp"
+            android:layout_toEndOf="@+id/tv_mileage_current"
+            android:letterSpacing="0.1"
+            android:text="@string/tv_unit_mileage"
+            android:textColor="@color/text_black"
+            android:textSize="12sp" />
+
+        <GridView
+            android:id="@+id/grid_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_mileage_current"
+            android:layout_marginTop="20dp"
+            android:numColumns="2"
+            android:verticalSpacing="24dp" />
+    </RelativeLayout>
+
+</com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+

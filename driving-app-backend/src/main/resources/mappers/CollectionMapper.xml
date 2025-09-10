@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ujs.drivingcar.mapper.CollectionMapper">
+
+    <insert id="addCollection" parameterType="com.ujs.drivingcar.pojo.CollectionPolid">
+        insert into collection (user_id,poi_id) values (#{userid},#{poi_id})
+    </insert>
+
+    <delete id="deleteCollection" parameterType="com.ujs.drivingcar.pojo.CollectionPolid">
+        delete from collection where user_id=#{userid} and poi_id=#{poi_id}
+    </delete>
+
+    <select id="existCollection" resultType="com.ujs.drivingcar.pojo.CollectionPolid">
+        select * from collection where user_id=#{userid} and poi_id=#{poi_id}
+    </select>
+
+    <select id="getallcollect" resultType="com.ujs.drivingcar.pojo.CollectionPolid">
+        select * from collection where user_id=#{userid}
+    </select>
+</mapper>

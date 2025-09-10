@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        tools:context=".Fragments.HomeFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:id="@+id/rlayout_header">
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:text="京口区" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_pulldown"
+                android:layout_toRightOf="@+id/tv_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_location"
+                android:text="阴 19℃"
+                android:textSize="12dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:gravity="center"
+                android:background="@drawable/bg_corners_20"
+                android:layout_alignParentEnd="true"
+                android:onClick="onScanCode">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/ic_scancode" />
+
+                <TextView
+                    android:id="@+id/tv_scancode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_black"
+                    android:text="扫一扫" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--    <androidx.viewpager2.widget.ViewPager2-->
+        <!--        android:id="@+id/pager_tips"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"/>-->
+        <!-- 轮播图 -->
+        <com.zhpan.bannerview.BannerViewPager
+            android:id="@+id/banner_view"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            app:bvp_round_corner="20dp"
+            app:bvp_scroll_duration="500"
+            app:bvp_indicator_style="round_rect"
+            app:bvp_indicator_slide_mode="worm"
+            android:layout_height="130dp" />
+
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- 启动 -->
+        <androidx.cardview.widget.CardView
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="20dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--   android:adjustViewBounds="true" ImageView高度被拉伸   -->
+
+                <ImageView
+                    android:id="@+id/image_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_map" />
+
+                <TextView
+                    android:id="@+id/tv_mileage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="55.83"
+                    android:textSize="48sp"
+                    android:layout_marginStart="12dp"
+                    android:textFontWeight="600"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/text_black" />
+
+                <LinearLayout
+                    android:id="@+id/llayout_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_mileage"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_corners_20"
+                    android:gravity="center"
+                    android:onClick="onChange"
+                    android:orientation="horizontal"
+                    android:paddingStart="12dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/tv_change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="切换至导航"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/ic_change" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_accumulated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_accumulated_mileage"
+                    android:layout_below="@+id/tv_mileage"
+                    android:layout_marginStart="16dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_type"
+                        android:layout_width="108dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_corners_20"
+                        android:letterSpacing="0.2"
+                        android:text="智能巡航"
+                        android:textColor="@color/text_black"
+                        android:textSize="13dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:ellipsize="none"/>
+
+                    <cn.enjoytoday.shadow.ShadowLayout
+
+                        android:id="@+id/shadowLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:bgColor="#fff"
+                        app:blurRadius="24dp"
+                        app:shadowColor="#77F08000"
+                        app:shadowRadius="72dp"
+                        app:xOffset="0dp"
+                        app:yOffset="0dp">
+
+                        <!--嵌套需要添加阴影的布局 -->
+                        <RelativeLayout
+                            android:id="@+id/rlayout_drive"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:clickable="true"
+                            android:background="@drawable/bg_circle_orange">
+
+                            <ImageView
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_centerInParent="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_drive" />
+
+                        </RelativeLayout>
+
+                    </cn.enjoytoday.shadow.ShadowLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+</ScrollView>

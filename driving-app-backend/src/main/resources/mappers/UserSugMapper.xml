@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ujs.drivingcar.mapper.UserSugMapper">
+    <insert id="addUserSug" parameterType="com.ujs.drivingcar.pojo.UserSuggestion">
+        insert into user_suggestion  (user_id,type,`time`,content,picture) values (#{userid},#{type},#{time},#{content},#{picture})
+    </insert>
+</mapper>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_detail_icon"
+        android:layout_width="24dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_home_normal" />
+
+    <TextView
+        android:id="@+id/tv_detail_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/img_detail_icon"
+        android:text="@string/tv_drive_time" />
+
+    <TextView
+        android:id="@+id/tv_detail_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/img_detail_icon"
+        android:text="74"
+        android:textColor="@color/text_black"
+        android:textSize="20sp"
+        android:includeFontPadding="false"/>
+
+    <TextView
+        android:id="@+id/tv_detail_unit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_detail_value"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@+id/tv_detail_value"
+        android:text="bpm"
+        android:textSize="12sp"
+        android:paddingBottom="1.5dp"/>
+</RelativeLayout>

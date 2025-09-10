@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="12dp"
+    android:background="@drawable/bg_start_glass"
+    tools:context=".Fragments.RegisterFragment">
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_back_right"
+        android:layout_gravity="right"
+        android:onClick="onNavStart" />
+
+    <TextView
+        android:layout_marginTop="-24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="欢迎加入"
+        android:textSize="24sp"
+        android:textColor="@color/text_black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="初次见面"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我们很高兴你的到来"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <EditText
+            android:id="@+id/edt_account_register"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_corners_12"
+            android:gravity="center_vertical"
+            android:hint="手机号/邮箱"
+            android:inputType="textEmailAddress"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_password_register"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_corners_12"
+            android:gravity="center_vertical"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edt_verifycode"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="54dp"
+                android:background="@drawable/bg_corners_12"
+                android:gravity="center_vertical"
+                android:hint="验证码"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_send_code"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_marginStart="8dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:gravity="center"
+                android:text="发送验证码"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_gray"
+                android:background="@drawable/bg_corners_12"
+                android:onClick="onVerifyCode" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_height="54dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="24dp"
+        app:cardBackgroundColor="@color/bg_red"
+        android:outlineAmbientShadowColor="@color/bg_red"
+        android:outlineSpotShadowColor="@color/bg_red"
+        android:onClick="onRegister">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="注册"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:letterSpacing="0.2" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/bg_line_left"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="其他注册方式" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/bg_line_right"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:src="@drawable/ic_qq" />
+
+        <ImageView
+            android:layout_marginStart="24dp"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:src="@drawable/ic_weixi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已有账户？"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击登录"
+            android:textColor="@color/text_blue"
+            android:paddingBottom="12dp"
+            android:onClick="onNavSignin" />
+    </LinearLayout>
+
+
+</LinearLayout>

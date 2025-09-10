@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="tab_text">
+        <item name="android:textSize">@dimen/tab_text_size</item>
+    </style>
+
+    <style name="no_title">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <declare-styleable name="SpreadView">
+        <!--中心圆颜色-->
+        <attr name="spread_center_color" format="color" />
+        <!--中心圆半径-->
+        <attr name="spread_center_radius" format="integer" />
+        <!--扩散圆颜色-->
+        <attr name="spread_spread_color" format="color" />
+        <!--扩散间距-->
+        <attr name="spread_distance" format="integer" />
+        <!--扩散最大半径-->
+        <attr name="spread_max_radius" format="integer" />
+        <!--扩散延迟间隔-->
+        <attr name="spread_delay_milliseconds" format="integer" />
+    </declare-styleable>
+</resources>
